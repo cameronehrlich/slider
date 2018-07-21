@@ -12,14 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let frame = CGRect(x: 0,
+                           y: view.bounds.height/2,
+                           width: view.bounds.width,
+                           height: 100)
+        let slider = StartSlider(frame: frame)
+        view.addSubview(slider)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
