@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3A5D82210A465000CED8F9 /* ToggleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A5D81210A465000CED8F9 /* ToggleSlider.swift */; };
 		7D3EB0BF210157DC006E58A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3EB0BE210157DC006E58A7 /* AppDelegate.swift */; };
 		7D3EB0C1210157DC006E58A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3EB0C0210157DC006E58A7 /* ViewController.swift */; };
 		7D3EB0C4210157DC006E58A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3EB0C2210157DC006E58A7 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D3A5D81210A465000CED8F9 /* ToggleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSlider.swift; sourceTree = "<group>"; };
 		7D3EB0BB210157DC006E58A7 /* Slider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3EB0BE210157DC006E58A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3EB0C0210157DC006E58A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				7D3EB0BE210157DC006E58A7 /* AppDelegate.swift */,
 				7D3EB0C0210157DC006E58A7 /* ViewController.swift */,
 				7D3EB0D021015888006E58A7 /* StartSlider.swift */,
+				7D3A5D81210A465000CED8F9 /* ToggleSlider.swift */,
 				7DAD69CB210278A90038E8A2 /* Assets.xcassets */,
 				7D3EB0C2210157DC006E58A7 /* Main.storyboard */,
 				7D3EB0C7210157DE006E58A7 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				7D3EB0C1210157DC006E58A7 /* ViewController.swift in Sources */,
 				7D3EB0D121015888006E58A7 /* StartSlider.swift in Sources */,
+				7D3A5D82210A465000CED8F9 /* ToggleSlider.swift in Sources */,
 				7D3EB0BF210157DC006E58A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
