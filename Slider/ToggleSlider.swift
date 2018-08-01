@@ -11,17 +11,17 @@ import QuartzCore
 
 private let kAnimateToCenterDuration: Double = 0.50
 private let kSideIconImageSize: CGFloat = 15
-private let kSideIconImagePadding: CGFloat = 5
+private let kSideIconImagePadding: CGFloat = 15
 private let kSideIconScaleAmount: CGFloat = 1.4
 private let kSideIconAnimationDuration: Double = 0.25
 private let kSideIconSelectionDetectionRatio: CGFloat = 0.05
-private let kTrackSideInset: CGFloat = 55
+private let kTrackSideInset: CGFloat = 65
 private let kTrackHeightSmall: CGFloat = 20
 private let kTrackHeightLarge: CGFloat = 50
 private let kThumbScaleAnimationDuration: Double = 0.4
 private let kThumbScaleAmount: CGFloat = 1.1
 private let kThumbOverlayAnimationDuration: Double = (kAnimateToCenterDuration / 2.6)
-private let kEdgeOvershootAmount: CGFloat = 40
+private let kEdgeOvershootAmount: CGFloat = 55
 private let kSelectionDetectionRatio: CGFloat = 0.55
 private var kBlobHeightDelta: CGFloat = 15
 private var kGrowShrinkDuration: Double = (kAnimateToCenterDuration / 2)
@@ -231,7 +231,9 @@ class ToggleSlider: UIControl {
         
         currentPoint = pointForTouch(touch)
         
-        guard !isAnimating && thumbView.frame.contains(currentPoint) else {
+        let inThumbView = thumbView.frame.contains(currentPoint)
+        let inTrackView = trackView.frame.contains(currentPoint)
+        guard !isAnimating && (inThumbView || inTrackView)  else {
             return false
         }
         
@@ -322,7 +324,7 @@ class ToggleSlider: UIControl {
                 strongSelf.thumbView.animateOverlayToProgress(0, completion: { _ in
                     guard let strongSelf = self else { return }
                     // Animate side icons fade back in
-                    UIView.animate(withDuration: 0.3, delay: 0, options: [], animations: {
+                    UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
                         strongSelf.leadingIconView.alpha = 1
                         strongSelf.trailingIconView.alpha = 1
                     }, completion: nil)
@@ -425,7 +427,7 @@ class ToggleSlider: UIControl {
     private func animateThumb(selected: Bool, _ completion: @escaping () -> ()) {
         let isOffsetToRight = (currentPoint.x > centerPoint.x)
         
-        let offsetAmount = (trackSize.width / 2) - (kTrackSideInset / 2) + kEdgeOvershootAmount
+        let offsetAmount = (trackSize.width / 2) - (trackHeight / 2) + kEdgeOvershootAmount
         let edgeX = isOffsetToRight ? offsetAmount : -offsetAmount
         
         func animateThumbToEdge(_ edgeCompletion: @escaping (Bool) -> ()) {
