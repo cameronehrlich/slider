@@ -1,6 +1,6 @@
 //
 //  ToggleSlider.swift
-//  Slider
+//  fair
 //
 //  Created by Cameron Ehrlich on 7/26/18.
 //  Copyright © 2018 Fair. All rights reserved.
@@ -799,7 +799,7 @@ private class ThumbView: UIView {
     }
     
     func animateOverlayToProgress(_ progress: CGFloat, completion: ((Bool) -> ())? = nil) {
-        let scaleBy = max(0.5, abs(progress)) // CA bug animating to 0
+        let scaleBy = max(0.5, abs(progress))
         let animations = { [weak self] in
             guard let strongSelf = self else { return }
             let scale = CGAffineTransform(scaleX: scaleBy, y: scaleBy)
